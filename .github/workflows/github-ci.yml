@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  build:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,4 +13,4 @@ jobs:
         run: docker build . --file Dockerfile.dev --tag pratap/docker-react
 
       - name: Run Test
-        run: docker run pratap/docker-react npm run test
+        run: docker run pratap/docker-react CI=true npm run test
