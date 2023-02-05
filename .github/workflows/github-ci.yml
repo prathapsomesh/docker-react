@@ -12,5 +12,5 @@ jobs:
       - name: Build the Docker image
         run: docker build . --file Dockerfile.dev --tag pratap/docker-react
 
-      - name: Run Lint
-        run: docker run pratap/docker-react npm run test -- --coverage
+      - name: Run Test
+        run: docker run pratap/docker-react npm run test
