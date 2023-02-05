@@ -16,6 +16,7 @@ jobs:
         run: docker run -e CI=true pratap/docker-react npm run test
 
   Deploy:
+    needs: install-dep
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
