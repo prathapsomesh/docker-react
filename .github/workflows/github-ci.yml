@@ -13,4 +13,4 @@ jobs:
         run: docker build . --file Dockerfile.dev --tag pratap/docker-react
 
       - name: Run Test
-        run: docker run pratap/docker-react CI=true npm run test
+        run: docker run -e  CI=true pratap/docker-react npm run test
